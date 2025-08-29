@@ -1,0 +1,59 @@
+@use "../base";
+@use "../utils/classes";
+@use "../utils/typography";
+@use "../components/bouttons";
+@use "../components/form";
+@use "../components/table";
+@use "../layout/navbar";
+@use "../base/theme";
+
+
+.addeq{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+                        "addeq__section";
+    padding-top: 90px !important;
+    border: 1px solid green;
+    height: 100vh;
+   
+    &__section{
+       grid-area: addeq__section;
+        width: 80%;
+        height: 500px;
+        background-color: theme.$white-main;
+        padding: 20px;
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        border: 0px solid red;
+        h3{
+            margin-bottom: 20px;
+        }
+
+        .c-form-input{
+            margin-bottom: 10px;
+            width: 80%;
+        }
+    } 
+    
+     @media(max-width: 590px){
+    .addeq {
+        &__section {
+            .c-form-input{
+                width: 100%;
+            }
+
+            .c-form-select{
+                width: 100%;
+            }
+
+            .c-gold-button{
+                width: 100%;
+            }
+        }
+    }
+ }
+}

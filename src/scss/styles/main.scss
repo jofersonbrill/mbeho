@@ -1,0 +1,586 @@
+@use "../base";
+@use "../utils/classes";
+@use "../utils/typography";
+@use "../components/bouttons";
+@use "../layout/navbar";
+@use "../base/theme";
+@use "../components/form";
+.App {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+                         "home-header",
+                         "container";
+
+    .container{
+
+        //mise en page section about
+        &__about{
+             .btn{
+                position: absolute;
+                top: 430px;
+                left: 10px;
+                &__left{
+                    margin-right: 20px;
+                    border: 0px solid red;
+                }
+                &__right{
+                    background-color: #c03afe !important;
+                    border: 1px solid red;
+                }
+            }
+        }
+        
+        &__about img{
+            width: 100%;
+            margin: auto;
+            border: 0px solid red;
+            position: relative;
+        }
+
+        &__about h1{
+            position: absolute;
+            top:220px;
+            left: 0;
+            font-size: 80px;
+            padding: 20px;
+            color: white;
+            font-family: theme.$montserrat;
+        }
+
+        &__about p{
+            position: absolute;
+            top: 320px;
+            left: 0;
+            padding: 20px;
+            color: white;
+            font-size: 18px;
+            font-family: theme.$Raleway;
+            line-height: 30px;
+
+        }
+
+        //----------------------------------------------------------------------
+
+
+          //mise en page section Service
+       &__services{
+        display: flex;
+
+        .service-description{
+            font-family: theme.$poppins;
+            &__group1{
+                border: 0px solid red;
+                display: flex;
+                justify-content: space-evenly;
+
+                .service1, .service2{
+                    border: 1px solid #c03afe;
+                    padding: 40px;
+                    border-radius: 20px;
+                    width: 40%;
+                    transition: 0.5s;
+                }
+
+                .service1:hover, .service2:hover{
+                     border-color: #fff;
+                     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+                     cursor: pointer;
+                }
+
+                .service1 img, .service2 img{
+                    border-radius: 50%;
+                }
+            }
+
+            &__group2{
+                border: 0px solid #c03afe;
+                display: flex;
+                justify-content: space-evenly;
+
+                 .service3, .service4{
+                    border: 1px solid #c03afe;
+                    padding: 40px;
+                    border-radius: 20px;
+                    width: 40%;
+                    transition: 0.5s;
+                }
+
+                 .service3:hover, .service4:hover{
+                     border-color: #fff;
+                     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+                     cursor: pointer;
+                }
+
+                .service3 img, .service4 img{
+                    border-radius: 50%;
+                }
+            }
+        }
+
+         .service-description h3{
+            font-family: theme.$montserrat;
+            font-size: 50px;
+            padding: 15px;
+         }
+       }
+
+       //---------------------------------------------------------
+
+
+         //mise en page section Pub
+
+       &__pub-contact img{
+        width: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+       }
+
+       &__pub-contact{
+        margin-bottom: 200px;
+        position: relative;
+
+       .pub{
+            position: absolute;
+            border: 0px solid red;
+            top: 30px;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            color: white;
+            padding: 20px;
+            
+            h3{
+                padding-left: 90px;
+                width: 70%;
+                border: 0px solid red;
+                font-family: theme.$montserrat;
+                font-size: 30px;
+
+            }
+
+            .btn-color{
+                background-color: white !important;
+                color: black;
+                padding-right: 30px;
+                border: 0px solid red;
+            }
+        }
+
+       }
+
+       &__partenaire img{
+        position: relative;
+       }
+
+       //------------------------------------------------------------
+
+
+         //mise en page section Partenaire
+
+       &__partenaire{
+        position: relative;
+
+        .displaypart{
+            position: absolute;
+            top:0;
+            left: 0;
+            border: 0px solid red;
+        }
+
+            .partenaire-logo{
+                display: flex;
+                justify-content: center;
+                border: 0px solid red;
+            }
+            .partenaire-logo div{
+                border: 0px solid red;
+                display: flex;
+                width: 100%;
+            }
+
+            .partenaire-logo div img{
+                width: 50%;
+                margin: auto;
+                border: 0px solid red;
+                filter: grayscale(90%);
+                transition: 0.5s;
+            }
+             .partenaire-logo div img:hover{
+                filter: grayscale(0);
+                cursor: pointer;
+             }
+       }
+
+       &__partenaire h3{
+            border: 0px solid red;
+            font-family: theme.$montserrat;
+            font-size: 45px; 
+            padding: 40px;
+            color: #5B03E4;
+       }
+
+       //--------------------------------------------------
+
+         //mise en page section Equipe
+
+        &__equipes h3{
+            font-family: theme.$montserrat;
+            color: #5B03E4;
+            font-size: 45px;
+            padding: 20px;
+        }
+
+       &__equipes{
+            background-color: #f9ebff;
+
+            .equipe-mbeho{
+
+                display: flex;
+                border: 0px solid red;
+                justify-content: center;
+               
+                padding: 40px;
+
+                &__profil {
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+                    margin: 25px;
+                    border-radius: 20px;
+                    transition: 0.5s;
+                    width: 18% !important;
+                    border: 0px solid red;
+                }
+
+                &__profil:hover {
+                    transform: scale(1.1);
+                }
+
+                &__arrow{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                &__arrow div{
+                    background-color: theme.$gray-main;
+                    color: #5B03E4;
+                    border-radius: 50%;
+                    padding: 20px;
+                    width: 80%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+                }
+
+                 &__arrow div:hover{
+                    cursor: pointer;
+                 }
+
+                &__profil img{
+                    width: 100%;
+                    border: 0px solid red;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                    transition: 0.5s;
+                    filter: grayscale(100%);
+                }
+
+                &__profil .scale{
+                    transform: scale(1.1);
+                    border: 0px solid red;
+                }
+
+                 &__profil img:hover{
+                    cursor: pointer;
+                    filter: grayscale(0);
+                }
+
+                &__profil p{
+                    padding: 20px;
+                    font-family: theme.$montserrat;
+                    font-size: 18px;
+                    color: #5B03E4;
+                }
+            }
+
+       }
+
+       //  -------------------------------------------------------
+
+        //mise en page section Contact
+       
+       &__contact{
+        position: relative;
+        width: 100%;
+        margin-bottom: 680px;
+
+
+        img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .formcontact{
+            position: absolute;
+            top: 85px;
+            left: 330px;
+            width: 50%;
+            border: 0px solid red;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            border-radius: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+
+            h3{
+                font-family: theme.$montserrat;
+                font-size: 30px;
+                padding: 40px;
+            }
+
+            .btn-contact{
+                width: 100%;
+            }
+
+            .contact-info{
+                display: flex;
+                justify-content: space-between;
+                color: #5B03E4;
+                font-family: theme.$nunito;
+            }
+        }
+
+       }
+
+       //-----------------------------------------------------
+
+       //mise en page section about
+
+       &__footer{
+        border: 0px solid red;
+        font-family: theme.$nunito;
+        display: flex;
+        justify-content: center;
+        background-color: #f9ebff;
+        padding: 20px;
+       }
+
+     
+    }
+
+
+   
+ }
+
+ //media query 
+
+ //Smartphone
+
+ @media(max-width: 576px){
+    .App {
+        .container{
+            &__about{
+                width: 100%;
+
+                .btn{
+                top: 150px;
+                border: 0px solid red;
+                width: 30%;
+                &__left{
+                    margin-right: 10px;
+                    border: 0px solid red;
+                    width: 45%;
+                    font-size: 5px;
+                    padding: 8px;
+                }
+                &__right{
+                    background-color: #c03afe !important;
+                    border: 1px solid red;
+                    width: 45%;
+                    font-size: 5px;
+                    padding: 8px;
+                    margin-right: 0;
+                }
+            }
+            }
+
+             &__about h1{
+                top:60px;
+                left: 0;
+                font-size: 30px;
+             }
+
+             &__about p{
+                    top: 100px;
+                    left: 0;
+                    font-size: 8px;
+                    line-height: 15px;
+
+            }
+
+            &__services{
+                width: 100%;
+                display: block;
+
+                .service-description{
+                    border: 0px solid red;
+
+                    &__group1{
+                        border: 0px solid red;
+
+                        .service1, .service2{
+                            padding: 20px;
+                            border-radius: 20px;
+                            width: 30%;
+                            font-size: 10px;
+                        }
+
+                        .service1 img, .service2 img{
+                            width: 60%;
+                        }
+                    }
+
+                    &__group2{
+                        padding-bottom: 15px;
+                        border: 0px solid red;
+
+                        .service3, .service4{
+                            padding: 20px;
+                            border-radius: 20px;
+                            width: 30%;
+                            font-size: 10px;
+                        }
+
+                         .service3 img, .service4 img{
+                            width: 60%;
+                        }
+                    }
+
+
+            }
+
+            }
+
+            &__services img{
+                width: 100%;
+            }
+
+            &__pub-contact{
+               width: 100%; 
+               border: 0px solid red;
+               height: auto;
+               margin-bottom: 80px;
+                
+               
+                .pub{
+                    
+                    top: 0px;
+                    
+                    h3{
+                        width: 70%;
+                        font-size: 8px;
+
+                    }
+
+                    .btn-color{
+                        position: absolute;
+                        right: 40px;
+                        top:0;
+                        background-color: white !important;
+                        color: black;
+                        padding-right: 30px;
+                        border: 0px solid red;
+                        padding: 5px;
+                        font-size: 10px;
+                    }
+                }
+
+            }
+            &__partenaire{
+                width: 100%;
+                display: block; 
+                border: 0px solid red;
+                margin-top: 100px;
+            }
+
+              &__partenaire .partenleft{
+                display: none;
+              }
+
+            &__equipes{
+                margin-top: 400px !important;
+                width: 100%; 
+                display: block;
+
+                 .equipe-mbeho{
+                        width: 100%;
+                        border: 0px solid red;
+                        padding: 0px;
+
+                        &__profil {
+                            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+                            margin: 5px;
+                            width: 500px;
+                            border: 0px solid red;
+                        }
+
+                        &__arrow{
+                            display:  none;
+                            border: 0px solid red;
+                            width: 5px;
+                        }
+
+
+                        &__profil img{
+                          
+                            display: block;
+                        }
+
+
+                        &__profil p{
+                            padding: 10px;
+                            display: block;
+                            font-size: 10px;
+                        }
+                    }
+            }
+            &__contact{
+                max-width: 100%; 
+                display: block;
+                border: 0px solid red;
+                height: 32%;
+                border: 0px solid red;
+                margin-bottom: 0px;
+
+                img {
+                    width: 100%;
+                    border: 0px solid red;
+                    height: 100%;
+                }
+
+                .formcontact{
+                    top: 50px;
+                    left: 50px;
+                    width: 80%;
+                    height: 85vh;
+                    padding: 20px;
+
+                    .contact-info{
+                        font-size: 10px;
+                    }
+                }
+
+            }
+            &__footer{
+                width: 100%; 
+                display: flex;
+            }
+        }
+    }
+ }

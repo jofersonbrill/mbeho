@@ -1,0 +1,16 @@
+@use "../base/theme";
+
+
+@mixin button-aspect {
+    font-family: theme.$base-text-lato;
+    font-size: theme.$fs-16;
+    color: theme.$white-main;
+    background-color: theme.$blue-main;
+    padding-inline: 35px;
+    padding-block: 15px;
+    margin-block: 25px;
+    line-height: 133,33%;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 50px;
+}

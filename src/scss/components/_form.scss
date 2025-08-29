@@ -1,0 +1,43 @@
+@use "../base/theme";
+
+.c-form-input {
+    padding-block: 12px;
+    padding-inline: 16px;
+    font-family: theme.$base-text-lato;
+    border: 1px solid theme.$gray-main;
+    inline-size: 48%;
+    border-radius: 10px;
+    outline: none;
+    margin-right: 5px;
+    border-radius: 10px;
+    background-color: #f9ebff;
+}
+
+.c-form-textarea {
+    padding-block: 9px;
+    padding-inline: 16px;
+    min-block-size: 131px;
+    resize: none;
+    font-family: theme.$base-text-lato;
+    inline-size: 100%;
+    outline: none;
+    border: 1px solid theme.$gray-main;
+    border-radius: 10px;
+    background-color: #f9ebff;
+}
+
+.c-form-select {
+    padding: 10px 10px;
+    font-size: 14px;
+    border: 1px solid theme.$blusky-main;
+    color: #333;
+    background-size: 12px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    border-radius: 8px;
+}
+
+.c-form-select:focus{
+    outline: none;
+    border-color: #0056b3;
+}

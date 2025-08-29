@@ -1,0 +1,44 @@
+@use "../base/theme";
+
+.c-table-aspect{
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.c-table-aspect thead {
+    background: theme.$blusky-main;
+    color: #fff; 
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.c-table-aspect th, .c-table-aspect td{
+    padding: 16px;
+    text-align: left;
+    width: auto;
+}
+
+.c-table-aspect tbody tr {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+    width: 100% !important;
+}
+
+.c-table-aspect tbody tr:hover{
+    background-color: theme.$gray-main;
+    cursor: pointer;
+}
+
+.c-table-aspect tbody tr:last-child{
+    border-bottom: none;
+}
+
+.line-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+// Fonts
+$heading-antic-didone: "Antic Didone";
+$base-text-lato: "Inter", sans-serif;
+$base-text-raleway: "Raleway";
+$roboto : "Roboto";
+$poppins : "Poppins";
+$nunito : "Nunito";
+$montserrat : "Montserrat";
+$Raleway : "Raleway";
+
+// Palette
+$blue-main: #6A39C9;
+$blusky-main: #3886c7;
+$purplesky-main: #b993d6;
+$gray-main: #f3f3f5;
+$gray-main-dash: #cccccc;
+$white-main: #fff;
+$dark-black: #0c0e0d;
+$chine-red: #A86565;
+$opatque-red: #F8E7E7;
+
+// REM font-sizes
+$fs-14: 0.875rem;
+$fs-16: 1rem;
+$fs-18: 1.125rem;
+$fs-20: 1.25rem;
+$fs-22: 1.375rem;
+$fs-24: 1.5rem;
+$fs-32: 2rem;
+$fs-33: 2.0625rem;
+$fs-36: 2.25rem;
+$fs-40: 2.5rem;
+$fs-50: 3.125rem;
+$fs-60: 3.75rem;
+$fs-80: 5rem;
+
+// dimensions
+$table-sub-container: 600px;
+
+// breakpoints
+$lg-breakpoint: 1130px;
