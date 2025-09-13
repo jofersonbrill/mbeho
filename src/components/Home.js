@@ -86,7 +86,7 @@ export default function Home({ sections }){
 
             </section>
 
-             <section className="container__equipes" ref={sections.section4}>
+             <section className="container__equipes" ref={sections.section2}>
                    <h3>Notre Equipe</h3> 
                    <div className="equipe-mbeho">
                     <div className="equipe-mbeho__arrow">
@@ -120,7 +120,7 @@ export default function Home({ sections }){
             </section>
 
 
-            <section className="container__services" ref={sections.section2}>
+            <section className="container__services" ref={sections.section3}>
 
                 <h1>Nos Service</h1>
 
@@ -202,7 +202,7 @@ export default function Home({ sections }){
                     </div>
             </section>
            
-            <section className="container__partenaire" ref={sections.section3}>
+            <section className="container__partenaire" ref={sections.section4}>
             <img src={PartenLeft} alt="partenaire left" className="partenleft" />
                 <div className="displaypart">
                         <h3>Nos Partenaires</h3>
