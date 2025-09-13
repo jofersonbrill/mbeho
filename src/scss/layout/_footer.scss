@@ -1,0 +1,127 @@
+@use "../base/theme";
+
+.footer-pages{
+    border: 0px solid red;
+    height: auto;
+    background-color: #111827;
+    color:#d1d5db;
+    font-family: theme.$Raleway;
+    padding-bottom: 10px;
+
+    h3{
+        color:white;
+        margin-bottom: 30px;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        padding: 50px;
+        padding-bottom: 70px;
+        border-bottom: 1px solid #1f2937;
+
+        ul li{
+            list-style-type: none;
+            line-height: 30px;
+        }
+
+        ul li a {
+            color: #d1d5db;
+        }
+
+        .description{
+            line-height: 30px;
+        }
+    }
+
+    &__copyright{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 0px solid red;
+         padding-left: 50px;
+         padding-right: 50px;
+         padding-top: 20px;
+         padding-bottom: 10px;
+        .politique{
+            border: 0px solid red;
+            ul{
+                display: flex;
+            }
+
+            ul li{
+                list-style-type: none;
+                padding: 10px;
+
+            }
+
+            ul li a{
+                color: #d1d5db;
+            }
+        }
+    }
+
+}
+
+ @media(max-width: 576px){
+
+    .footer-pages{
+        width: 100%;
+        &__content{
+            display: block;
+            border: 0px solid red;
+            text-align: center;
+        }
+
+        &__copyright{
+            text-align: center;
+            display: block;
+        }
+    }
+
+ }
+
+ @media(max-width: 768px){
+    .footer-pages{
+        width: 100%;
+        &__content{
+            display: block;
+            border: 0px solid red;
+            text-align: center;
+        }
+
+        &__copyright{
+            text-align: center;
+            display: block;
+
+            .politique{
+                border: 0px solid red;
+                ul{
+                    justify-content: center;
+                }
+            }
+        }
+    }
+ }
+
+ @media(max-width: 800px){
+    .footer-pages{
+        width: 100%;
+        &__content{
+            display: block;
+            border: 0px solid red;
+            text-align: center;
+        }
+
+        &__copyright{
+            text-align: center;
+            display: block;
+
+            .politique{
+                border: 0px solid red;
+                ul{
+                    justify-content: center;
+                }
+            }
+        }
+    }
+ }

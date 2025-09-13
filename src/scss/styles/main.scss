@@ -3,6 +3,7 @@
 @use "../utils/typography";
 @use "../components/bouttons";
 @use "../layout/navbar";
+@use "../layout/footer";
 @use "../base/theme";
 @use "../components/form";
 .App {
@@ -10,7 +11,8 @@
     grid-template-columns: 1fr;
     grid-template-areas: 
                          "home-header",
-                         "container";
+                         "container",
+                         "footer-pages";
 
     .container{
 
@@ -18,15 +20,16 @@
         &__about{
              .btn{
                 position: absolute;
-                top: 430px;
+                top: 400px;
                 left: 10px;
                 &__left{
                     margin-right: 20px;
                     border: 0px solid red;
+                    color:white !important;
                 }
                 &__right{
                     background-color: #c03afe !important;
-                    border: 1px solid red;
+                    border: 0px solid red;
                 }
             }
         }
@@ -40,9 +43,9 @@
 
         &__about h1{
             position: absolute;
-            top:220px;
+            top:170px;
             left: 0;
-            font-size: 80px;
+            font-size: theme.$fs-40;
             padding: 20px;
             color: white;
             font-family: theme.$montserrat;
@@ -65,7 +68,119 @@
 
           //mise en page section Service
        &__services{
-        display: flex;
+        width: 90%;
+        margin: auto;
+        font-family: theme.$Raleway;
+
+
+        h1{
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: theme.$fs-40;
+        }
+
+        .paragraph{
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 25px;
+
+             .btn-services{
+            background: linear-gradient(135deg, #2563EB, #4F46E5) !important; 
+            }   
+        }
+
+       
+
+
+        .service-group1{
+            display: flex;
+        
+            &__content{
+                border: 1px solid #e5e7eb; /* border-gray-200 */
+                border-radius: 20px;
+                padding: 25px;
+                margin-right: 25px;
+                width: 33%;
+                margin-bottom: 20px;
+                transition: 0.5s;
+                h3{
+                    margin-bottom: 20px;
+                }
+                p{
+                    line-height: 25px;
+                }
+
+                .img-service img{
+                    border-radius: 50%;
+                    border: 0px solid red;
+                }
+            }
+
+            &__content:hover{
+                border-color: #93c5fd; /* border-blue-300 */
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+                 cursor: pointer;
+                 transform: translateY(-4px); /* hover:-translate-y-1 */
+            }
+
+            @keyframes content {
+                    0% {
+                        transform: translateY(0);
+                        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+                    }
+                    100% {
+                        transform: translateY(-4px);
+                        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+                    }
+                }
+
+        }
+
+        .service-group2{
+            display: flex;
+             &__content{
+                border: 1px solid #f9ebff;
+                border-radius: 20px;
+                padding: 25px;
+                margin-right: 25px;
+                width: 33%;
+                margin-bottom: 20px;
+                transition: 0.5s;
+                h3{
+                    margin-bottom: 20px;
+                }
+                p{
+                    line-height: 25px;
+                }
+
+                .img-service img{
+                    border-radius: 50%;
+                    border: 0px solid red;
+                }
+            }
+
+            &__content:hover{
+                border-color: #93c5fd; /* border-blue-300 */
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+                 cursor: pointer;
+                 transform: translateY(-4px); /* hover:-translate-y-1 */
+            }
+
+            @keyframes content {
+                    0% {
+                        transform: translateY(0);
+                        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+                    }
+                    100% {
+                        transform: translateY(-4px);
+                        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+                    }
+                }
+
+        }
+
+
+        /*display: flex;
 
         .service-description{
             font-family: theme.$poppins;
@@ -120,9 +235,9 @@
 
          .service-description h3{
             font-family: theme.$montserrat;
-            font-size: 50px;
+            font-size: theme.$fs-40;
             padding: 15px;
-         }
+         }*/
        }
 
        //---------------------------------------------------------
@@ -130,22 +245,27 @@
 
          //mise en page section Pub
 
-       &__pub-contact img{
+      /* &__pub-contact img{
         width: 100%;
         position: absolute;
         top:0;
         left: 0;
-       }
+       }*/
 
        &__pub-contact{
-        margin-bottom: 200px;
-        position: relative;
+        background: linear-gradient(135deg, #2563EB, #4F46E5);
+        height: 200px;
+        display: flex;
+        padding-left: 50px;
+        padding-right: 50px;
+        align-items: center;
+        /*position: relative;*/
 
        .pub{
-            position: absolute;
+            /*position: absolute;
             border: 0px solid red;
             top: 30px;
-            left: 0;
+            left: 0;*/
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -153,7 +273,7 @@
             padding: 20px;
             
             h3{
-                padding-left: 90px;
+               
                 width: 70%;
                 border: 0px solid red;
                 font-family: theme.$montserrat;
@@ -164,18 +284,18 @@
             .btn-color{
                 background-color: white !important;
                 color: black;
-                padding-right: 30px;
                 border: 0px solid red;
             }
         }
 
        }
 
-       &__partenaire img{
+      
+       //------------------------------------------------------------
+
+        &__partenaire img{
         position: relative;
        }
-
-       //------------------------------------------------------------
 
 
          //mise en page section Partenaire
@@ -194,11 +314,14 @@
                 display: flex;
                 justify-content: center;
                 border: 0px solid red;
+              
+              
             }
             .partenaire-logo div{
                 border: 0px solid red;
                 display: flex;
                 width: 100%;
+                 
             }
 
             .partenaire-logo div img{
@@ -207,6 +330,16 @@
                 border: 0px solid red;
                 filter: grayscale(90%);
                 transition: 0.5s;
+            }
+
+            .partenaire-logo .part-descr img{
+                width: 50% !important;
+                border-radius: 50%;
+                margin: auto;
+                border: 0px solid red;
+                filter: grayscale(90%);
+                transition: 0.5s;
+                background-color: #2563EB !important;
             }
              .partenaire-logo div img:hover{
                 filter: grayscale(0);
@@ -217,9 +350,10 @@
        &__partenaire h3{
             border: 0px solid red;
             font-family: theme.$montserrat;
-            font-size: 45px; 
+            font-size: theme.$fs-40; 
             padding: 40px;
-            color: #5B03E4;
+            color: black;
+            text-align: center;
        }
 
        //--------------------------------------------------
@@ -228,13 +362,17 @@
 
         &__equipes h3{
             font-family: theme.$montserrat;
-            color: #5B03E4;
-            font-size: 45px;
+            color:black;
+            font-size: theme.$fs-40;
             padding: 20px;
         }
 
        &__equipes{
-            background-color: #f9ebff;
+            background: white;
+
+            h3{
+                text-align: center;
+            }
 
             .equipe-mbeho{
 
@@ -313,9 +451,15 @@
         //mise en page section Contact
        
        &__contact{
-        position: relative;
+        /*position: relative;
         width: 100%;
-        margin-bottom: 680px;
+        margin-bottom: 680px;*/
+        background: linear-gradient(135deg, #267BFF, #92FE9D);
+        border: 0px solid red;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
 
         img {
@@ -326,14 +470,15 @@
         }
 
         .formcontact{
-            position: absolute;
+            /*position: absolute;
             top: 85px;
-            left: 330px;
+            left: 330px;*/
             width: 50%;
             border: 0px solid red;
-            height: 80vh;
-            display: flex;
-            justify-content: center;
+            height: 90vh;
+            padding: 20px;
+            padding-top: 0px;
+            padding-bottom: 0px;
             border-radius: 20px;
             background-color: white;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
@@ -342,6 +487,7 @@
                 font-family: theme.$montserrat;
                 font-size: 30px;
                 padding: 40px;
+                padding-left: 0px;
             }
 
             .btn-contact{
@@ -354,6 +500,14 @@
                 color: #5B03E4;
                 font-family: theme.$nunito;
             }
+        }
+
+        .formcontact form input, select, textarea {
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 15px;
+            background-color: #f9ebff;
+            border: 1px solid linear-gar;
         }
 
        }
@@ -380,6 +534,538 @@
 
  //media query 
 
+
+
+
+ /*--------------------------------------------------------------------------------------------------*/
+
+ //Desktop Grand Ecran
+
+ @media only screen and (min-width: 1897px){
+
+
+    .App {
+
+            .container{
+                &__about{
+                     max-width: 100%;
+                    border: 0px solid red;
+
+                    .btn{
+                        position: absolute;
+                        top: 600px !important;
+                        left: 90px !important;
+
+
+                    }
+
+                }
+
+                 &__about p{
+                    font-size: 28px;
+                    top:450px;
+                    left: 50px;
+                    line-height: 40px;
+                }
+
+                &__about h1{
+                    font-size: 125px;
+                    top:290px;
+                    left:50px;
+                }
+
+                 &__services img{
+                    width: 60%;
+                }
+
+                 &__pub-contact{
+                    width: 100%;
+                    display: block;
+                    margin-bottom: 370px;
+                    .pub {
+                        top: 60px;
+                        border: 0px solid red;
+                    }
+                    .pub h3{
+                        font-size: 45px;
+                    }
+
+                    .btn-color{
+                        position: absolute;
+                        right:60px;
+                       top: 10px; 
+                    }
+
+                  }
+
+                     &__contact{
+                    height: 30%;
+                    margin-bottom: 0px;
+                img {
+                    width: 100%;
+                    border: 0px solid red;
+                    height: 100%;
+                }
+
+                .formcontact{
+                    top: 180px;
+                    left: 470px;
+                    width: 45%;
+                    height: 80vh;
+                  
+
+                    .contact-info{
+                        
+                        border: 0px solid red;
+                    }
+
+                    form{
+                        border: 0px solid red;
+                        padding: 0;
+                        height: 490px;
+                        margin-top: 100px;
+                        width: 80%;
+                    }
+                }
+
+            }
+
+             &__footer{
+                width: 100%; 
+                display: flex;
+                border: 0px solid red;
+            }
+
+
+            }
+        }
+
+
+ }
+
+ //Desktop
+
+ @media(max-width: 1202px){
+
+ }
+
+ //Tablet 
+
+ @media(max-width: 1114px){
+    .App {
+        .container{
+
+              &__about{
+
+                .btn{
+                top:350px;
+                left: 15px;
+                border: 0px solid red;
+                width: 220px;
+                    
+                &__left{
+                   
+                    border: 0px solid red;
+                    width: 100% !important;
+                    font-size: theme.$fs-14;
+                    padding: 10px;
+                }
+                &__right{
+                    display: none;
+                    background-color: #c03afe !important;
+                    border: 0px solid red;
+                    font-size: 5px;
+                    padding: 15px;
+                    margin-right: 0;
+                }
+            }
+                
+              }
+
+               &__about h1{
+                top:130px;
+                left: 0;
+                font-size: theme.$fs-40;
+             }
+
+             &__about p{
+                    top: 290px;
+                    left: 0;
+                    font-size: theme.$fs-16;
+                    line-height: 20px;
+
+            }
+
+              &__services{
+                display: block;
+              }
+
+               &__pub-contact{
+                display: none;
+               }
+
+                &__partenaire{
+                    display: block;
+                }
+
+                &__equipes{
+                    display: block;
+                }
+
+                 &__contact{
+                    display: block;
+                        max-width: 100%; 
+                        padding-top: 40px;
+                        padding-bottom: 40px;
+
+                        .formcontact{
+                            margin: auto;
+                            height: auto;
+                        }
+
+                 }
+
+
+
+
+
+        }
+ }
+
+}
+
+ @media(max-width: 1024px){
+    .App {
+        .container{
+
+              &__about{
+
+                .btn{
+                top:350px;
+                left: 15px;
+                border: 0px solid red;
+                width: 220px;
+                    
+                &__left{
+                   
+                    border: 0px solid red;
+                    width: 100% !important;
+                    font-size: theme.$fs-14;
+                    padding: 10px;
+                }
+                &__right{
+                    display: none;
+                    background-color: #c03afe !important;
+                    border: 0px solid red;
+                    font-size: 5px;
+                    padding: 15px;
+                    margin-right: 0;
+                }
+            }
+                
+              }
+
+               &__about h1{
+                top:130px;
+                left: 0;
+                font-size: theme.$fs-40;
+             }
+
+             &__about p{
+                    top: 290px;
+                    left: 0;
+                    font-size: theme.$fs-16;
+                    line-height: 20px;
+
+            }
+
+              &__services{
+                display: block;
+              }
+
+               &__pub-contact{
+                display: none;
+               }
+
+                &__partenaire{
+                    display: block;
+                }
+
+                &__equipes{
+                    display: block;
+                }
+
+                 &__contact{
+                    display: block;
+                        max-width: 100%; 
+                        padding-top: 40px;
+                        padding-bottom: 40px;
+
+                        .formcontact{
+                            margin: auto;
+                            height: auto;
+                        }
+
+                 }
+
+
+
+
+
+        }
+ }
+
+}
+
+ @media(max-width: 834px){
+    .App {
+        .container{
+
+              &__about{
+
+                .btn{
+                top:300px;
+                left: 15px;
+                border: 0px solid red;
+                width: 220px;
+                    
+                &__left{
+                   
+                    border: 0px solid red;
+                    width: 100% !important;
+                    font-size: theme.$fs-14;
+                    padding: 10px;
+                }
+                &__right{
+                    display: none;
+                    background-color: #c03afe !important;
+                    border: 0px solid red;
+                    font-size: 5px;
+                    padding: 15px;
+                    margin-right: 0;
+                }
+            }
+                
+              }
+
+               &__about h1{
+                top:130px;
+                left: 0;
+                font-size: theme.$fs-32;
+             }
+
+             &__about p{
+                    top: 260px;
+                    left: 0;
+                    font-size: 8px;
+                    line-height: 15px;
+
+            }
+
+              &__services{
+                display: block;
+              }
+
+               &__pub-contact{
+                display: none;
+               }
+
+                &__partenaire{
+                    display: block;
+                }
+
+                &__equipes{
+                    display: block;
+                }
+
+                 &__contact{
+                    display: block;
+                        max-width: 100%; 
+                        padding-top: 40px;
+                        padding-bottom: 40px;
+
+                        .formcontact{
+                            margin: auto;
+                            height: auto;
+                        }
+
+                 }
+
+
+
+
+
+        }
+ }
+
+}
+
+ @media(max-width: 820px){
+    .App {
+        .container{
+
+              &__about{
+
+                .btn{
+                top:300px;
+                left: 15px;
+                border: 0px solid red;
+                width: 220px;
+                    
+                &__left{
+                   
+                    border: 0px solid red;
+                    width: 100% !important;
+                    font-size: theme.$fs-14;
+                    padding: 10px;
+                }
+                &__right{
+                    display: none;
+                    background-color: #c03afe !important;
+                    border: 0px solid red;
+                    font-size: 5px;
+                    padding: 15px;
+                    margin-right: 0;
+                }
+            }
+                
+              }
+
+               &__about h1{
+                top:130px;
+                left: 0;
+                font-size: theme.$fs-32;
+             }
+
+             &__about p{
+                    top: 260px;
+                    left: 0;
+                    font-size: 8px;
+                    line-height: 15px;
+
+            }
+
+              &__services{
+                display: block;
+              }
+
+               &__pub-contact{
+                display: none;
+               }
+
+                &__partenaire{
+                    display: block;
+                }
+
+                &__equipes{
+                    display: block;
+                }
+
+                 &__contact{
+                    display: block;
+                        max-width: 100%; 
+                        padding-top: 40px;
+                        padding-bottom: 40px;
+
+                        .formcontact{
+                            margin: auto;
+                            height: auto;
+                        }
+
+                 }
+
+
+
+
+
+        }
+ }
+
+}
+
+ @media(max-width: 768px){
+    .App {
+        .container{
+
+              &__about{
+
+                .btn{
+                top:300px;
+                left: 15px;
+                border: 0px solid red;
+                width: 220px;
+                    
+                &__left{
+                   
+                    border: 0px solid red;
+                    width: 100% !important;
+                    font-size: theme.$fs-14;
+                    padding: 10px;
+                }
+                &__right{
+                    display: none;
+                    background-color: #c03afe !important;
+                    border: 0px solid red;
+                    font-size: 5px;
+                    padding: 15px;
+                    margin-right: 0;
+                }
+            }
+                
+              }
+
+               &__about h1{
+                top:130px;
+                left: 0;
+                font-size: theme.$fs-32;
+             }
+
+             &__about p{
+                    top: 260px;
+                    left: 0;
+                    font-size: 10px !important;
+                    line-height: 15px;
+
+            }
+
+              &__services{
+                display: block;
+              }
+
+               &__pub-contact{
+                display: none;
+               }
+
+                &__partenaire{
+                    display: block;
+                }
+
+                &__equipes{
+                    display: block;
+                }
+
+                 &__contact{
+                    display: block;
+                        max-width: 100%; 
+                        padding-top: 40px;
+                        padding-bottom: 40px;
+
+                        .formcontact{
+                            margin: auto;
+                            height: auto;
+                        }
+
+                 }
+
+
+
+
+
+        }
+ }
+
+}
+
  //Smartphone
 
  @media(max-width: 576px){
@@ -389,20 +1075,22 @@
                 width: 100%;
 
                 .btn{
-                top: 150px;
+                top:170px;
+                left: 15px;
                 border: 0px solid red;
-                width: 30%;
+               max-width: 100%;
                 &__left{
-                    margin-right: 10px;
+                   
                     border: 0px solid red;
-                    width: 45%;
-                    font-size: 5px;
-                    padding: 8px;
+                    max-width: 40% !important;
+                    font-size: 5px !important;
+                    padding: 8px !important;
                 }
                 &__right{
+                    display: none;
                     background-color: #c03afe !important;
-                    border: 1px solid red;
-                    width: 45%;
+                    border: 0px solid red;
+                    width: 20%;
                     font-size: 5px;
                     padding: 8px;
                     margin-right: 0;
@@ -410,60 +1098,52 @@
             }
             }
 
+             &__about img{
+               margin-top: 40px;
+            }
+
              &__about h1{
                 top:60px;
                 left: 0;
-                font-size: 30px;
+                font-size: theme.$fs-18;
              }
 
              &__about p{
-                    top: 100px;
+                    top: 140px;
                     left: 0;
-                    font-size: 8px;
-                    line-height: 15px;
+                    font-size: 6px !important;
+                    line-height: 10px;
 
             }
 
             &__services{
-                width: 100%;
+
+                width: 80%;
                 display: block;
 
-                .service-description{
-                    border: 0px solid red;
+                h1{
+                    font-size: theme.$fs-32;
+                }
 
-                    &__group1{
-                        border: 0px solid red;
+                .service-group1{
+                    display: block;
+                    width: 100%;
+                    
+                    &__content{
+                        width: 100%;
+                        margin: auto;
+                        margin-bottom: 15px;
 
-                        .service1, .service2{
-                            padding: 20px;
-                            border-radius: 20px;
+                        .img-service{
                             width: 30%;
-                            font-size: 10px;
-                        }
-
-                        .service1 img, .service2 img{
-                            width: 60%;
                         }
                     }
+                }
 
-                    &__group2{
-                        padding-bottom: 15px;
-                        border: 0px solid red;
-
-                        .service3, .service4{
-                            padding: 20px;
-                            border-radius: 20px;
-                            width: 30%;
-                            font-size: 10px;
-                        }
-
-                         .service3 img, .service4 img{
-                            width: 60%;
-                        }
-                    }
-
-
-            }
+                .service-group2{
+                    display: none;
+                }
+                
 
             }
 
@@ -472,34 +1152,8 @@
             }
 
             &__pub-contact{
-               width: 100%; 
-               border: 0px solid red;
-               height: auto;
-               margin-bottom: 80px;
-                
-               
-                .pub{
-                    
-                    top: 0px;
-                    
-                    h3{
-                        width: 70%;
-                        font-size: 8px;
-
-                    }
-
-                    .btn-color{
-                        position: absolute;
-                        right: 40px;
-                        top:0;
-                        background-color: white !important;
-                        color: black;
-                        padding-right: 30px;
-                        border: 0px solid red;
-                        padding: 5px;
-                        font-size: 10px;
-                    }
-                }
+              
+              display: none;
 
             }
             &__partenaire{
@@ -507,21 +1161,25 @@
                 display: block; 
                 border: 0px solid red;
                 margin-top: 100px;
+                display: block;
             }
 
               &__partenaire .partenleft{
-                display: none;
+                display: block;
               }
 
             &__equipes{
-                margin-top: 400px !important;
                 width: 100%; 
                 display: block;
+                 h3{
+                    font-size: theme.$fs-32;
+                }
 
                  .equipe-mbeho{
                         width: 100%;
                         border: 0px solid red;
                         padding: 0px;
+
 
                         &__profil {
                             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
@@ -552,24 +1210,12 @@
             }
             &__contact{
                 max-width: 100%; 
-                display: block;
-                border: 0px solid red;
-                height: 32%;
-                border: 0px solid red;
-                margin-bottom: 0px;
-
-                img {
-                    width: 100%;
-                    border: 0px solid red;
-                    height: 100%;
-                }
+                padding-top: 40px;
+                padding-bottom: 40px;
 
                 .formcontact{
-                    top: 50px;
-                    left: 50px;
-                    width: 80%;
-                    height: 85vh;
-                    padding: 20px;
+                    margin: auto;
+                    height: auto;
 
                     .contact-info{
                         font-size: 10px;
@@ -577,10 +1223,101 @@
                 }
 
             }
-            &__footer{
-                width: 100%; 
-                display: flex;
-            }
         }
     }
  }
+
+   @media(max-width: 428px){
+        .App {
+        .container{
+            
+            &__contact{
+                width: 100%;
+        
+            }
+        }
+    }
+  }
+
+  @media(max-width: 430px){
+        .App {
+        .container{
+            
+            &__contact{
+              
+                border: 0px solid red;
+
+            }
+        }
+    }
+  }
+
+  @media(max-width: 442px){
+        .App {
+        .container{
+            
+            &__contact{
+    
+                border: 0px solid red;
+
+            }
+        }
+    }
+  }
+
+  @media(max-width: 390px){
+        .App {
+        .container{
+            
+            &__contact{
+                
+                border: 0px solid red;
+
+            }
+
+        }
+    }
+  }
+
+  @media(max-width: 375px){
+        .App {
+        .container{
+            
+            &__contact{
+             
+                border: 0px solid red;
+
+            }
+           
+        }
+    }
+  }
+
+
+    @media(max-width: 360px){
+        .App {
+        .container{
+            
+            &__contact{
+                
+                border: 0px solid red;
+
+            }
+            
+        }
+    }
+  }
+
+  @media(max-width: 320px){
+        .App {
+        .container{
+            
+            &__contact{
+               
+                border: 0px solid red;
+
+            }
+            
+        }
+    }
+  }
