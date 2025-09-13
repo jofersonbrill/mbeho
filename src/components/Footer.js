@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="footer-pages__content">
                 <div className='description'>
                     <h3>MBEHO</h3>
-                    <p>Transformons ensemble vos idées en <br/> soution digitales innovantes. <br/> expertise, créativité et résultat garantis <br /> depuis plus de 10ans.</p>
+                    <p>Transformons ensemble vos idées en <br/> soution digitales innovantes. <br/> expertise, créativité et résultat garantis <br /> depuis plus de 10 ans.</p>
                 </div>
                 <div>
                     <h3>Navigation</h3>

@@ -8,7 +8,7 @@ import './scss/styles/about.scss';
 
 import { useRef } from "react";
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 
 
 
@@ -23,16 +23,20 @@ function App() {
 
   return (
     <div className="App">
-          {/** On passe des ref au menu */}
-          <Navbar sections={{ section1: section1Ref, section2: section2Ref, section3: section3Ref, section4: section4Ref, section5:section5Ref }} />
-           {/** On passe aussi des ref a la page principale */}
-          <Routes>
-            <Route path="/" element={<Home sections={{ section1: section1Ref, section2: section2Ref, section3: section3Ref, section4: section4Ref, section5:section5Ref }} />} />
-            <Route path="/about" element={ <About />} />
-          </Routes>
 
-         <Footer />
-          <ScrollY />
+            {/** On passe des ref au menu */}
+            <Navbar sections={{ section1: section1Ref, section2: section2Ref, section3: section3Ref, section4: section4Ref, section5:section5Ref }} />
+            {/** On passe aussi des ref a la page principale */}
+
+          <Routes>
+
+              <Route path="/" element={<Home sections={{ section1: section1Ref, section2: section2Ref, section3: section3Ref, section4: section4Ref, section5:section5Ref }} />} />
+              <Route path="/about" element={ <About />} />
+
+           </Routes>
+
+            <Footer />
+            <ScrollY />
     </div>
   );
 }

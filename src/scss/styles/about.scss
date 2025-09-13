@@ -82,8 +82,10 @@
            justify-content: center;
            align-items: center;
            text-align: justify;
-           font-family: theme.$poppins;
-           color: #383838;
+           font-family: theme.$Raleway;
+           line-height: 30px;
+           color: black;
+           font-size: theme.$fs-16;
 
            .impact{
                display: flex; 

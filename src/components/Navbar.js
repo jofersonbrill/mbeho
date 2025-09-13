@@ -71,7 +71,7 @@ export default function Navbar( {sections} ){
                         <NavLink to="/"><li onClick={()  => {scrollToSection(sections.section1)}}>ACCUEIL</li></NavLink>
                         <NavLink to="/"><li onClick={() => {scrollToSection(sections.section2)}}>EQUIPE</li></NavLink>
                         <NavLink to="/"><li onClick={() => {scrollToSection(sections.section3)}}>SERVICES</li></NavLink>
-                        <NavLink to="/"><li onClick={() => {scrollToSection(sections.section4)}}>PARTENAIRE</li></NavLink>
+                        <NavLink to="/"><li onClick={() => {scrollToSection(sections.section4)}}>PARTENAIRES</li></NavLink>
                         <NavLink to="/"><li onClick={() => {scrollToSection(sections.section5)}}>CONTACT</li></NavLink>
 
                          <label htmlFor="check" className="cacher-menu"><FontAwesomeIcon icon={faXmark} /></label>
